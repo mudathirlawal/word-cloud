@@ -1,2 +1,2 @@
-# word-cloud
-WOrdCloud: Coursera Python Capstone Project
+# WordCloud
+WordCloud: Coursera Python Capstone Project
