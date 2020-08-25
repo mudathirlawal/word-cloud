@@ -8,7 +8,6 @@ def calculate_frequencies(file_contents):
     "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"]
     
     # LEARNER CODE STARTS HERE
-    
     cleaned_list = []
     content_list = file_contents.strip().split(punctuations)
     
@@ -23,15 +22,21 @@ def calculate_frequencies(file_contents):
             if item.isalpha() and is_relivant(item, uninteresting_words):
                 cleaned_list.append(item.lower())
                 
-    def generate_from_frequencies(cleaned_list):
+    def generate_dictionary(sifted_list):
         words_dictionary = {}
+        # More code here ...
+        # More code here ...
+        # More code here ...
+        return words_dictionary
         pass
         pass
     
     
+    return generate_dictionary(cleaned_list)
+        
     #wordcloud
     cloud = wordcloud.WordCloud()
-    cloud.generate_from_frequencies(calculate_frequencies())
+    cloud.generate_from_frequencies()
     return cloud.to_array()
 
     
