@@ -31,12 +31,10 @@ def calculate_frequencies(file_contents):
     content_list = file_contents.strip().split(punctuations)
     cleaned_list = create_cleaned_list(content_list, uninteresting_words)
     words_dict = generate_dictionary(cleaned_list)
-    
-    return generate_dictionary(cleaned_list)
-        
+            
     #wordcloud
     cloud = wordcloud.WordCloud()
-    cloud.generate_from_frequencies()
+    cloud.generate_from_frequencies(words_dict)
     return cloud.to_array()
 
     
