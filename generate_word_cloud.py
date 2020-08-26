@@ -11,11 +11,11 @@ def create_cleaned_list(content_list, irrelivant_jargons):
             cleaned_list.append(item.lower())
     return neat_list        
 
-def generate_frequencies(sifted_list):
+def generate_word_freq_dict(sifted_list):
     words_dictionary = {}
     for word in sifted_list:
         words_dictionary[word] = words_dictionary.get(word, 0) + 1        
-    return list(words_dictionary.values()).sort()
+    return words_dictionary
 
 def calculate_frequencies(file_contents):
     # Here is a list of punctuations and uninteresting words you can use to process your text
@@ -29,9 +29,15 @@ def calculate_frequencies(file_contents):
     # LEARNER CODE STARTS HERE
     content_list = file_contents.strip().split(punctuations)
     cleaned_list = create_cleaned_list(content_list, uninteresting_words)
-    frequencies_list = generate_frequencies(cleaned_list)
+    words_dict = generate_word_freq_dict(cleaned_list)
         
     # Wordcloud module
     cloud = wordcloud.WordCloud()
-    cloud.generate_from_frequencies(frequencies_list)
+    cloud.generate_from_frequencies(words_dict)
     return cloud.to_array()
+
+# Display your wordcloud image
+myimage = calculate_frequencies(file_contents)
+plt.imshow(myimage, interpolation = 'nearest')
+plt.axis('off')
+plt.show()
