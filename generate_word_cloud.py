@@ -13,9 +13,8 @@ def create_cleaned_list(content_list, irrelivant_jargons):
 
 def generate_dictionary(sifted_list):
     words_dictionary = {}
-    # More code here ...
-    # More code here ...
-    # More code here ...
+    for word in sifted_list:
+        words_dictionary[word] = words_dictionary.get(word, 0) + 1        
     return words_dictionary
 
 def calculate_frequencies(file_contents):
