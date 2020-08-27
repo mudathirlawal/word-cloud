@@ -19,7 +19,8 @@ def generate_word_freq_dict(sifted_list):
 
 def calculate_frequencies(file_contents):
     # Here is a list of punctuations and uninteresting words you can use to process your text
-    punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    # punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+    punctuations = '''\! |(|)|-|\[|\]|{|}|; |: |'|"|\\|, |\||<|>|\. |\|? |@|#|$|%|\^|&|\*|_|~'''
     uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my", \
     "we", "our", "ours", "you", "your", "yours", "he", "she", "him", "his", "her", "hers", "its", "they", "them", \
     "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being", \
