@@ -42,9 +42,7 @@ def calculate_frequencies(file_contents):
     "their", "what", "which", "who", "whom", "this", "that", "am", "are", "was", "were", "be", "been", "being", \
     "have", "has", "had", "do", "does", "did", "but", "at", "by", "with", "from", "here", "when", "where", "how", \
     "all", "any", "both", "each", "few", "more", "some", "such", "no", "nor", "too", "very", "can", "will", "just"]
-    
-    # LEARNER CODE START HERE
-    
+        
     #wordcloud
     cloud = wordcloud.WordCloud()
     cloud.generate_from_frequencies()
