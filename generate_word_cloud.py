@@ -26,7 +26,6 @@ def _upload():
 
 _upload()
 
-
 def is_relivant(word, jargons):
     '''
     Checks wether a word is relevant or not.
@@ -65,7 +64,7 @@ def calculate_frequencies(file_contents):
     '''
     Takes a text file as input and generates a word-frequency dictionary from it leveraging the wordcloud module.
     '''
-    # Here is a list of punctuations and uninteresting words you can use to process your text
+    # Here is a list of punctuations and uninteresting words for use in processing the text
     # punctuations = '''\! |(|)|-|\[|\]|{|}|; |: |'|"|\\|, |\||<|>|\. |\|? |@|#|$|%|\^|&|\*|_|~'''
     puctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
     uninteresting_words = ["the", "a", "to", "if", "is", "it", "of", "and", "or", "an", "as", "i", "me", "my", \
@@ -89,4 +88,3 @@ myimage = calculate_frequencies(file_contents)
 plt.imshow(myimage, interpolation = 'nearest')
 plt.axis('off')
 plt.show()
-
